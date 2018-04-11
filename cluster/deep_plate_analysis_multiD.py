@@ -115,7 +115,7 @@ for i in range(position,position+num_positions):#range(len(positions)):
     cell_struct = {'sum_fluo': sum_int,'mean_fluo':mean_int,'area': area, 'posx': posx, 'posy': posy,'all_pix':all_pix}
     cell_frame = pd.DataFrame(cell_struct)
     cell_frame['pos_name'] = positions[i]
-    cell_frame['well_name'] = well_str[i]
+    cell_frame['well_name'] = well[i]
     
     cell_frame.to_csv(folder_to_save+'/dataframes/'+positions[i]+'.csv')
     
